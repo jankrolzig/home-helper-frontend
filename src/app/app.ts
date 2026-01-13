@@ -1,9 +1,17 @@
-import {Component} from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
+import { Sidebar } from './components/sidebar/sidebar';
+import { SupabaseService } from './services/supabase.service';
+import { AsyncPipe } from '@angular/common';
 
 @Component({
+  changeDetection: ChangeDetectionStrategy.OnPush,
   selector: 'app-root',
-  imports: [],
+  imports: [RouterOutlet, Sidebar, AsyncPipe],
   templateUrl: './app.html',
-  styleUrl: './app.css',
 })
-export class App {}
+export class App {
+  private supabase = inject(SupabaseService);
+
+  isAuthenticated = this.supabase.isAuthenticated$;
+}

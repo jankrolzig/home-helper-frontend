@@ -1,0 +1,25 @@
+<div hlmSidebarWrapper>
+  <hlm-sidebar>
+    <div hlmSidebarHeader>
+      <h3 [class]="hlmH3">Home helper</h3>
+    </div>
+    <div hlmSidebarContent>
+      <div hlmSidebarGroup>
+        <div hlmSidebarGroupLabel>Tools</div>
+        <div hlmSidebarGroupContent>
+          <ul hlmSidebarMenu>
+            @for (item of _items; track item.title) {
+              <li hlmSidebarMenuItem>
+                <a hlmSidebarMenuButton routerLink="{{ item.url }}">
+                  <ng-icon hlm [name]="item.icon" />
+                  <span>{{ item.title }}</span>
+                </a>
+              </li>
+            }
+          </ul>
+        </div>
+      </div>
+    </div>
+  </hlm-sidebar>
+  <ng-content />
+</div>
