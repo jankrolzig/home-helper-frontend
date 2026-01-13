@@ -41,3 +41,21 @@ __screenshots__/
 # System files
 .DS_Store
 Thumbs.db
+
+# .gitignore
+.env.local
+.env.*.local
+*.env
+.env
+.env.production
+.env.development
+.env.test
+
+# Drizzle
+libs/drizzle/migrations/*.sql
+!drizzle/migrations/.gitkeep
+
+# Supabase
+supabase/config.toml
+supabase/.temp
+supabase/.env

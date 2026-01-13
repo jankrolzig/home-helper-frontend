@@ -31,6 +31,10 @@ export class SupabaseService {
     this.initializeAuth();
   }
 
+  getClient(): SupabaseClient {
+    return this.supabase;
+  }
+
   private async initializeAuth(): Promise<void> {
     try {
       const {
