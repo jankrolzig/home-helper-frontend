@@ -1,9 +1,9 @@
 import { Routes } from '@angular/router';
 import { authGuard, publicGuard } from './guards/auth.guard';
-import { AuthComponent } from './components/auth/auth.component';
+import { Login } from './components/login/login';
 
 export const routes: Routes = [
-  { path: 'login', component: AuthComponent, canActivate: [publicGuard] },
+  { path: 'login', component: Login, canActivate: [publicGuard] },
   {
     path: 'auth/callback',
     loadComponent: () =>

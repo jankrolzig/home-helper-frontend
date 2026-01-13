@@ -6,9 +6,9 @@ import { ActivatedRoute, Router } from '@angular/router';
 @Component({
   selector: 'app-auth',
   imports: [ReactiveFormsModule],
-  templateUrl: './auth.component.html',
+  templateUrl: './login.html',
 })
-export class AuthComponent implements OnInit {
+export class Login implements OnInit {
   private supabaseService = inject(SupabaseService);
   private router = inject(Router);
   private route = inject(ActivatedRoute);
