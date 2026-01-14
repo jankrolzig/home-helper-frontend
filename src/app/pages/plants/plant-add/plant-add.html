@@ -1,0 +1,18 @@
+<div class="flex justify-between items-end border rounded-md p-4">
+  <div class="grid w-full max-w-sm items-center gap-2">
+    <label for="pictures" hlmLabel>Upload file</label>
+    <input
+      accept="image/*"
+      hlmInput
+      id="pictures"
+      multiple
+      type="file"
+      (change)="onImageSelected($event)"
+    />
+  </div>
+
+  <button hlmBtn size="sm" type="button" variant="outline" (click)="identifyPlant()">
+    <ng-icon hlm name="lucideFileScan" size="sm" />
+    Identify plant
+  </button>
+</div>

@@ -1,0 +1,31 @@
+<div class="flex flex-col gap-2">
+  <span [class]="hlmH4">All plants</span>
+  @if (!isLoading()) {
+    @if (plants().length === 0) {
+      <div hlmAlert>
+        <ng-icon hlm hlmAlertIcon name="lucideInfo" />
+        <h4 hlmAlertTitle>No plants yet</h4>
+      </div>
+    } @else {
+      <div class="grid grid-cols-6 gap-4" hlmItemGroup>
+        @for (plant of plants(); track plant.id) {
+          <div hlmItem variant="outline">
+            <div hlmItemHeader>
+              <img
+                class="aspect-square rounded-sm object-cover"
+                height="64"
+                [alt]="plant.name"
+                [src]="plant.plant_images[0].url"
+              />
+            </div>
+            <div hlmItemContent>
+              <div hlmItemTitle>{{ plant.name }}</div>
+            </div>
+          </div>
+        }
+      </div>
+    }
+  } @else {
+    <hlm-skeleton class="h-[75px] w-[250px] rounded-xl" />
+  }
+</div>

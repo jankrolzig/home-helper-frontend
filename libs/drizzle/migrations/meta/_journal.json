@@ -15,6 +15,20 @@
       "when": 1768314163240,
       "tag": "0001_gigantic_whiplash",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1768386623090,
+      "tag": "0002_bored_exodus",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "7",
+      "when": 1768389578866,
+      "tag": "0003_ambitious_blonde_phantom",
+      "breakpoints": true
     }
   ]
 }
