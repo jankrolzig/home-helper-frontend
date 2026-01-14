@@ -51,12 +51,12 @@ import { RouterLink } from '@angular/router';
 export class Sidebar {
   protected readonly _items = [
     {
-      title: 'Home',
+      title: 'Dashboard',
       url: '#',
       icon: 'lucideHouse',
     },
     {
-      title: 'Pflanzen',
+      title: 'Plantify',
       url: 'plants',
       icon: 'lucideLeaf',
     },
